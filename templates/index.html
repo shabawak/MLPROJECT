@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODEL | Machine Learning </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 form-div">
+                <h1 class="project_title">Water Quality Prediction</h1>
+                <form class="form-horizontal" action="{{url_for('predict')}}" method="post">
+
+                    <div class="form-group">
+                        <label for="ph">ph:</label>
+                        <input type="text" name="ph" placeholder="ph" class="form-control form-control-lg" id="ph" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="Hardness">Hardness:</label>
+                        <input type="text" name="Hardness" placeholder="Hardness" class="form-control form-control-lg" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="Solids">Solids:</label>
+                        <input type="text" name="Solids" placeholder="Solids" class="form-control form-control-lg" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="Chloramines">Chloramines:</label>
+                        <input type="text" name="Chloramines" placeholder="Chloramines" class="form-control form-control-lg" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="Sulphate">Sulphate:</label>
+                        <input type="text" name="Sulphate" placeholder="Sulphate" class="form-control form-control-lg" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="Conductivity">Conductivity:</label>
+                        <input type="text" name="Conductivity" placeholder="Conductivity" class="form-control form-control-lg" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="Organic_carbon">Organic_carbon:</label>
+                        <input type="text" name="Organic_carbon" placeholder="Organic_carbon" class="form-control form-control-lg" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="Trihalomethanes">Trihalomethanes:</label>
+                        <input type="text" name="Trihalomethanes" placeholder="Trihalomethanes" class="form-control form-control-lg" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="Turbidity">Turbidity:</label>
+                        <input type="text" name="Turbidity" placeholder="Turbidity" class="form-control form-control-lg" required>
+                    </div>
+                    <br>
+                
+                    
+
+                    <button type="submit" class="btn btn-primary btn-block btn-larg">Predict</button>
+                </form>
+
+                <br>
+                {{prediction_value}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

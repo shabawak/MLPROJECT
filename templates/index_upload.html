@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLOAD</title>
+
+    <style>
+        table.data {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>WATER PREDICTION MODEL</h1>
+    <h2>Upload Excel File (.xlsx)</h2>
+    <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="" >
+        <input type="submit" value="Upload">
+    </form>
+
+    <br>
+    <br>
+
+    <h1>CSV Data</h1>
+    {{ table|safe }}
+
+</body>
+</html>
