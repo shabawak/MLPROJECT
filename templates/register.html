@@ -7,6 +7,19 @@
 </head>
 <body>
     <h1>Register Page</h1>
+
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.username }}
+        {{ form.password }}
+        {{ form.submit }}
+    </form>
+
+    <!-- Display registration error message, if applicable -->
+    {% if form.username.errors %}
+    <p class="error">{{ form.username.errors[0] }}</p>
+    {% endif %}
+
     <a href="{{url_for('login')}}">Already have an account? Login in</a><br>
 </body>
 </html>
